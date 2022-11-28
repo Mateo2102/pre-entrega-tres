@@ -1,0 +1,71 @@
+#info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .formul{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        #nombre, #apellido, #area {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 0.7rem 10rem 0.7rem 0.2rem;
+            border-radius: 5px;
+        }
+        .radio {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            #submit, #reset {
+                background-color: #ffffff;
+                color: rgb(0, 0, 0);
+                border-radius: 6px;
+                margin: 0.5rem;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+            }
+        }
+    }
+    .p-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #201c1c;
+        margin: 0 20rem 0rem 20rem;
+        padding: 1rem 0 1rem 0;
+        text-align: justify;
+    }
+    .lista-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5rem;
+        li {
+            font-size: large;
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+    #info{
+        .p-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #201c1c;
+            margin: 0 9rem 0rem 9rem;
+            padding: 1rem 0 1rem 0;
+            text-align: justify;
+        }
+        .lista-info {
+            display: flex;
+            flex-direction: column;
+            margin: 0rem 0rem 1rem 5rem;
+            li {
+                font-size: large;
+            }
+        }
+    }
+}
