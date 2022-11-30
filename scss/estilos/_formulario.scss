@@ -3,10 +3,9 @@
     flex-direction: column;
     align-items: center;
     .formul{
-        display: flex;
+        @include flex;
         flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
+        gap: 1.9rem;
         #nombre, #apellido, #area {
             background-color: #ffffff;
             color: rgb(0, 0, 0);
@@ -21,11 +20,15 @@
             display: flex;
             justify-content: space-around;
             #submit, #reset {
+                @include tit-botones;
+                font-size: 1.5rem;
                 background-color: #ffffff;
-                color: rgb(0, 0, 0);
-                border-radius: 6px;
                 margin: 0.5rem;
-                padding: 0.5rem 1rem 0.5rem 1rem;
+                padding: 0.5rem 2rem 0.5rem 2rem;
+                transition: 0.2s;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
         }
     }
