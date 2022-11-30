@@ -1,3 +1,12 @@
+header{
+    .img-logo {
+        border-radius: 10px;
+        margin-right: 2rem;
+        filter: drop-shadow(1px 1px 4px rgb(0, 0, 0));
+        width: 25rem;
+    }
+}
+
 section#logos {
     grid-area: logos;
     .logos__main {
@@ -22,13 +31,7 @@ section#logos {
         }
     }
 }
-header{
-    .img-logo {
-        border-radius: 10px;
-        filter: drop-shadow(1px 1px 6px rgb(0, 0, 0));
-        width: 25rem;
-    }
-}
+
 
 @media screen and (max-width: 800px){
     section#logos {
@@ -36,6 +39,14 @@ header{
     }
     .wp-icon {
         display: none;
+    }   
+}
+
+@media screen and (max-width: 500px){
+    header{
+        .img-logo {
+            display: none;
+        }
     }
 }
 

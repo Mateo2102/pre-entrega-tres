@@ -1,4 +1,4 @@
-@import "utilidades/variables";
+@import "utilidades/mixin";
 @import "estilos/formulario";
 @import "estilos/logos";
 
@@ -50,6 +50,9 @@ p {
         bottom: 1.5rem;
         right: 2.5rem;
         transition: 0.5s;
+        &:hover{
+            transform: scale(1.08);
+        }
     }
 }
 
@@ -59,9 +62,9 @@ header {
     grid-area: header;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(131,0,0,1) 97%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include flex;
+    justify-content: space-between;
+    
     nav {
         ul {
             display: flex;
@@ -69,8 +72,7 @@ header {
             margin: 1rem;
             padding: 0.1rem;
             li {
-                display: flex;
-                align-items: center;
+                @include flex;
                 justify-content: center;
                 background-color: #dbd6d6;
                 box-shadow: 5px 2px 10px #3e0606;
@@ -112,9 +114,8 @@ section#titulo {
         text-align: justify;
     }
     .p-main {
-        display: flex;
+        @include flex;
         flex-direction: column;
-        align-items: center;
         color: #201c1c;
         margin: 0 20rem 0rem 20rem;
         padding: 1rem 0 1rem 0;
@@ -156,12 +157,10 @@ main {
     background: rgb(131,0,0);
     background: linear-gradient(0deg, rgba(131,0,0,1) 0%, rgba(198,138,138,1) 100%);
     grid-area: footer1;
-    display: flex;
-    align-items: center;
+    @include flex;
     .footer-uno {
-        display: flex;
+        @include flex;
         flex-direction: column;
-        align-items: center;
         .footer-uno__ml{
             width: 5rem;
         }
@@ -201,21 +200,18 @@ main {
     /* header */
 
     header {
-        display: flex;
+        @include flex;
         justify-content: center;
-        align-items: center;
         .img-logo {
             display: none;
         }
         nav{
             ul{
-                display: flex;
-                align-content: center;
+                @include flex;
                 margin: 0.5rem;
                 padding: 0.1rem;
                 li{
-                    display: flex;
-                    align-items: center;
+                    @include flex;
                     justify-content: center;
                     background-color: #dbd6d6;
                     box-shadow: 5px 2px 10px #3e0606;
@@ -255,7 +251,6 @@ main {
             margin: 0 10rem 0rem 10rem;
             padding: 1rem 0 1rem 0;
             text-align: justify;
-            display: inline-block;
             .p-main-dos {
                 display: flex;
                 justify-content: center;
@@ -303,7 +298,84 @@ main {
             }
         }
     }
-
-
 }
 
+@media screen and (max-width: 500px) {
+    .contenedor-principal {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "titulo"
+        "main"
+        "footer1";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+
+        /* header */ 
+    }
+
+    header {
+        grid-area: header;
+        @include flex;
+        justify-content: space-around;
+        background-image: url(../img/frente.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        nav{
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                li{
+                    @include flex;
+                    justify-content: center;
+                    background-color: #dbd6d6;
+                    box-shadow: 5px 2px 10px #000000;
+                    border-radius: 10px;
+                    margin: 1rem;
+                    padding: 1.2rem 5rem 1.2rem 5rem;
+                    height: 0.6rem;
+                }
+            }
+        }
+    }
+
+    /* titulo */
+
+    section#titulo {
+        grid-area: titulo;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0rem;
+        .tit-main {
+            padding: 0.5rem;
+            width: 25rem;
+            text-align: center;
+            border: solid;
+            box-shadow: 3px 2px 15px black;
+        }
+        .subtit-main {
+            display: inline-block;
+            color: #483434;
+            margin: 0rem 2rem 0 2rem;
+            text-align: justify;
+        }
+        .p-main {
+            display: inline-block;
+            margin: 0rem 2rem 2rem 2rem;
+            text-align: justify;
+        }
+    }
+
+    /* main */
+
+    main {
+        grid-area: main;
+        display: flex;
+        margin: 0rem;
+        .img-main {
+            display: none;
+        }
+    }
+}
