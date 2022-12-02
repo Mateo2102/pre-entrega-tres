@@ -4,7 +4,7 @@
 @import "estilos/logos";
 
 
-/* reset */ 
+// reset
 
 *{
     padding: 0%;
@@ -16,10 +16,10 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: $colorfondo;
 }
 
-/* estilos generales */
+// estilos generales
 
 h1 {
     font-size: 2rem;
@@ -35,7 +35,7 @@ p {
     font-size: larger;
 }
 
-/* layout */
+//layout
 
 .contenedor-principal {
     display: grid;
@@ -59,7 +59,7 @@ p {
     }
 }
 
-/* header */
+// header
 
 header {
     grid-area: header;

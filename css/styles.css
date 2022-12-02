@@ -79,30 +79,30 @@
     text-decoration: underline; } }
 
 header .img-logo {
-  border-radius: 10px;
-  margin-right: 2rem;
-  filter: drop-shadow(1px 1px 4px black);
-  width: 25rem; }
+  width: 6.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px 5px black);
+  width: 25rem;
+  border-radius: 15px;
+  margin-right: 4rem; }
 
 section#logos {
   grid-area: logos; }
   section#logos .logos__main {
     display: flex;
-    padding: 2.5rem;
-    margin: 2rem 0 0 0;
+    padding: 5rem;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     background: #c68a8a;
     background: linear-gradient(0deg, #c68a8a 0%, white 100%); }
-    section#logos .logos__main .banner {
-      width: 100px;
+    section#logos .logos__main .banner, section#logos .logos__main .gilera, section#logos .logos__main .zanella {
+      width: 6.5rem;
       padding: 0.5rem;
       border-radius: 5px;
-      filter: drop-shadow(2px 2px 6px black); }
-    section#logos .logos__main .zanella {
-      width: 220px; }
-    section#logos .logos__main .gilera {
-      width: 150px; }
+      filter: drop-shadow(2px 2px 5px black); }
+    section#logos .logos__main .gilera, section#logos .logos__main .zanella {
+      width: 12rem; }
 
 @media screen and (max-width: 800px) {
   section#logos {
@@ -114,7 +114,6 @@ section#logos {
   header .img-logo {
     display: none; } }
 
-/* reset */
 * {
   padding: 0%;
   margin: 0;
@@ -126,7 +125,6 @@ section#logos {
 body {
   background-color: white; }
 
-/* estilos generales */
 h1 {
   font-size: 2rem;
   font-style: italic;
@@ -138,7 +136,6 @@ h2 {
 p {
   font-size: larger; }
 
-/* layout */
 .contenedor-principal {
   display: grid;
   grid-template-areas: "header header header header" "titulo titulo titulo titulo" "main main main main" "logos logos logos logos" "footer1 footer1 footer2 footer2";
@@ -153,7 +150,6 @@ p {
     .contenedor-principal .wp-icon:hover {
       transform: scale(1.08); }
 
-/* header */
 header {
   grid-area: header;
   background: white;

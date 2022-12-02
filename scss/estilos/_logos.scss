@@ -1,9 +1,9 @@
 header{
     .img-logo {
-        border-radius: 10px;
-        margin-right: 2rem;
-        filter: drop-shadow(1px 1px 4px rgb(0, 0, 0));
+        @include diseñoimagen;
         width: 25rem;
+        border-radius: 15px;
+        margin-right: 4rem;
     }
 }
 
@@ -11,24 +11,19 @@ section#logos {
     grid-area: logos;
     .logos__main {
         display: flex;
-        padding: 2.5rem;
-        margin: 2rem 0 0 0;
+        padding: 5rem;
         flex-wrap: nowrap;
         justify-content: space-evenly;
         background: rgb(198,138,138);
         background: linear-gradient(0deg, rgba(198,138,138,1) 0%, rgba(255,255,255,1) 100%);
         .banner {
-            width: 100px;
-            padding: 0.5rem;
-            border-radius: 5px;
-            filter: drop-shadow(2px 2px 6px rgb(0, 0, 0));
+            @include diseñoimagen;
         }
-        .zanella {
-            width: 220px;
+        .gilera,.zanella{
+            @extend .banner;
+            width: 12rem;
         }
-        .gilera {
-            width: 150px;
-        }
+
     }
 }
 
